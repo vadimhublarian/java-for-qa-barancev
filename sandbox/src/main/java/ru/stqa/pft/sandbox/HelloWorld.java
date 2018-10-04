@@ -8,23 +8,14 @@ public class HelloWorld {
         hello("user");
         hello("Nick");
 
-        double squareSideLen = 5;
-        System.out.println("An area of a square with a side " + squareSideLen + " = " + area(squareSideLen));
+        Square mySquare = new Square(5);
+        System.out.println("An area of a square with a side " + mySquare.squareSideLen + " = " + mySquare.area());
 
-        double sideAlen = 4;
-        double sideBlen = 6;
-        System.out.println("An area of a rectangle with a side " + sideAlen + " and " + sideBlen + " = " + area(sideAlen, sideBlen));
+        Rectangle myRectangle = new Rectangle(4, 6);
+        System.out.println("An area of a rectangle with a side " + myRectangle.sideAlen + " and " + myRectangle.sideBlen + " = " + myRectangle.area());
     }
 
     public static void hello(String name) {
         System.out.println("Hello, " + name + "!");
-    }
-
-    public static double area(double len) {
-        return len * len;
-    }
-
-    public static double area(double a, double b) {
-        return a * b;
     }
 }
